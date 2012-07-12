@@ -31,12 +31,21 @@ var UIQuery = {
       return element.name() === name;
     });
 
-    // If no element is found, let's get a UIAElementNil to return
+    if (!element) return this.makeNilElement();
+    else return element;
+  },
+
+  // Can't make one of these UIAElementNils, so let's "find" one
+  makeNilElement: function() {
+    if (this._nilElement) return this._nilElement;
+
+    var target = UIATarget.localTarget();
+
     target.pushTimeout(0);
-    if (!element) element = target.elements().firstWithName("__NOPE__");
+    this._nilElement = target.elements().firstWithName("__NOPE__");
     target.popTimeout();
 
-    return element;
+    return this._nilElement;
   },
 
   matchIn: function(context, matches) {
