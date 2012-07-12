@@ -21,31 +21,26 @@
 var UIQuery = {
 
   firstWithName: function(name, context) {
-    var target = UIATarget.localTarget();
-
-    if (!context) {
-      context = target.frontMostApp().mainWindow();
-    }
-
-    var element = this.matchIn(context, function(element) {
+    return this.findWithMatch(function(element) {
       return element.name() === name;
-    });
-
-    if (!element) return this.makeNilElement();
-    else return element;
+    }, context);
   },
 
   firstKindWithName: function(kind, name, context) {
-    var typeClass = this.kindMap[kind];
+    var kindClass = this.kindMap[kind];
+    return this.findWithMatch(function(element) {
+      return element instanceof kindClass && element.name() === name;
+    }, context);
+  },
+
+  findWithMatch: function(matches, context) {
     var target = UIATarget.localTarget();
 
     if (!context) {
       context = target.frontMostApp().mainWindow();
     }
 
-    var element = this.matchIn(context, function(element) {
-      return element instanceof typeClass && element.name() === name;
-    });
+    var element = this.matchIn(context, matches);
 
     if (!element) return this.makeNilElement();
     else return element;
