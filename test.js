@@ -7,11 +7,16 @@ test("Finds first element with a specific name", function() {
 });
 
 test("Find first type of element with a specific name", function() {
-  var elm = UIQuery.firstKindWithName("cell", "Row 1");
+  var elm = UIQuery.firstKindWithName("cells", "Row 1");
   if (!elm.isValid()) throw "Element wasn't found";
 
-  var elm = UIQuery.firstKindWithName("button", "Row 1");
+  var elm = UIQuery.firstKindWithName("buttons", "Row 1");
   if (elm.isValid()) throw "Table cell was found when button was expected!";
+});
+
+test("Experimental query syntax", function() {
+  var elm = UIQuery.firstWithQuery("cells[Row 1]");
+  if (!elm.isValid()) throw "Element wasn't found";
 });
 
 test("Returns invalid element if nothing found", function() {

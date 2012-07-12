@@ -21,19 +21,29 @@
 var UIQuery = {
 
   firstWithName: function(name, context) {
-    return this.findWithMatch(function(element) {
+    return this.firstWithMatch(function(element) {
       return element.name() === name;
     }, context);
   },
 
   firstKindWithName: function(kind, name, context) {
     var kindClass = this.kindMap[kind];
-    return this.findWithMatch(function(element) {
+    if (!kindClass) throw "Unrecognized element kind " + kind;
+
+    return this.firstWithMatch(function(element) {
       return element instanceof kindClass && element.name() === name;
     }, context);
   },
 
-  findWithMatch: function(matches, context) {
+  firstWithQuery: function(query, context) {
+    var matches = query.match(/^(.*?)\[(.*)\]$/);
+    if (!matches) throw "Query " + query + " not recognized!";
+
+    var kind = matches[1], name = matches[2];
+    return this.firstKindWithName(kind, name, context);
+  },
+
+  firstWithMatch: function(matches, context) {
     var target = UIATarget.localTarget();
 
     if (!context) {
@@ -81,9 +91,9 @@ var UIQuery = {
   },
 
   kindMap: {
-    button: UIAButton,
-    cell: UIATableCell,
-    tableView: UIATableView
+    buttons: UIAButton,
+    cells: UIATableCell,
+    tableViews: UIATableView
   }
 
 };
