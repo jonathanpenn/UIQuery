@@ -32,7 +32,9 @@ var UIQuery = {
     });
 
     // If no element is found, let's get a UIAElementNil to return
+    target.pushTimeout(0);
     if (!element) element = target.elements().firstWithName("__NOPE__");
+    target.popTimeout();
 
     return element;
   },
