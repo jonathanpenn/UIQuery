@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABE55EDC15AF041300AA0616 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE55EDB15AF041300AA0616 /* UIKit.framework */; };
+		ABE55EDE15AF041300AA0616 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE55EDD15AF041300AA0616 /* Foundation.framework */; };
+		ABE55EE015AF041300AA0616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE55EDF15AF041300AA0616 /* CoreGraphics.framework */; };
+		ABE55EE615AF041300AA0616 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABE55EE415AF041300AA0616 /* InfoPlist.strings */; };
+		ABE55EE815AF041300AA0616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE55EE715AF041300AA0616 /* main.m */; };
+		ABE55EEC15AF041300AA0616 /* CMNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE55EEB15AF041300AA0616 /* CMNAppDelegate.m */; };
+		ABE55EEF15AF041300AA0616 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE55EED15AF041300AA0616 /* MainStoryboard.storyboard */; };
+		ABE55EF215AF041300AA0616 /* CMNMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE55EF115AF041300AA0616 /* CMNMasterViewController.m */; };
+		ABE55EF515AF041300AA0616 /* CMNDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE55EF415AF041300AA0616 /* CMNDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABE55ED715AF041300AA0616 /* UIQueryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIQueryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE55EDB15AF041300AA0616 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABE55EDD15AF041300AA0616 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABE55EDF15AF041300AA0616 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABE55EE315AF041300AA0616 /* UIQueryTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIQueryTest-Info.plist"; sourceTree = "<group>"; };
+		ABE55EE515AF041300AA0616 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABE55EE715AF041300AA0616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABE55EE915AF041300AA0616 /* UIQueryTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIQueryTest-Prefix.pch"; sourceTree = "<group>"; };
+		ABE55EEA15AF041300AA0616 /* CMNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMNAppDelegate.h; sourceTree = "<group>"; };
+		ABE55EEB15AF041300AA0616 /* CMNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMNAppDelegate.m; sourceTree = "<group>"; };
+		ABE55EEE15AF041300AA0616 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		ABE55EF015AF041300AA0616 /* CMNMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMNMasterViewController.h; sourceTree = "<group>"; };
+		ABE55EF115AF041300AA0616 /* CMNMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMNMasterViewController.m; sourceTree = "<group>"; };
+		ABE55EF315AF041300AA0616 /* CMNDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMNDetailViewController.h; sourceTree = "<group>"; };
+		ABE55EF415AF041300AA0616 /* CMNDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMNDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABE55ED415AF041300AA0616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE55EDC15AF041300AA0616 /* UIKit.framework in Frameworks */,
+				ABE55EDE15AF041300AA0616 /* Foundation.framework in Frameworks */,
+				ABE55EE015AF041300AA0616 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABE55ECC15AF041200AA0616 = {
+			isa = PBXGroup;
+			children = (
+				ABE55EE115AF041300AA0616 /* UIQueryTest */,
+				ABE55EDA15AF041300AA0616 /* Frameworks */,
+				ABE55ED815AF041300AA0616 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABE55ED815AF041300AA0616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE55ED715AF041300AA0616 /* UIQueryTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE55EDA15AF041300AA0616 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABE55EDB15AF041300AA0616 /* UIKit.framework */,
+				ABE55EDD15AF041300AA0616 /* Foundation.framework */,
+				ABE55EDF15AF041300AA0616 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABE55EE115AF041300AA0616 /* UIQueryTest */ = {
+			isa = PBXGroup;
+			children = (
+				ABE55EEA15AF041300AA0616 /* CMNAppDelegate.h */,
+				ABE55EEB15AF041300AA0616 /* CMNAppDelegate.m */,
+				ABE55EED15AF041300AA0616 /* MainStoryboard.storyboard */,
+				ABE55EF015AF041300AA0616 /* CMNMasterViewController.h */,
+				ABE55EF115AF041300AA0616 /* CMNMasterViewController.m */,
+				ABE55EF315AF041300AA0616 /* CMNDetailViewController.h */,
+				ABE55EF415AF041300AA0616 /* CMNDetailViewController.m */,
+				ABE55EE215AF041300AA0616 /* Supporting Files */,
+			);
+			path = UIQueryTest;
+			sourceTree = "<group>";
+		};
+		ABE55EE215AF041300AA0616 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABE55EE315AF041300AA0616 /* UIQueryTest-Info.plist */,
+				ABE55EE415AF041300AA0616 /* InfoPlist.strings */,
+				ABE55EE715AF041300AA0616 /* main.m */,
+				ABE55EE915AF041300AA0616 /* UIQueryTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE55ED615AF041300AA0616 /* UIQueryTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE55EF815AF041300AA0616 /* Build configuration list for PBXNativeTarget "UIQueryTest" */;
+			buildPhases = (
+				ABE55ED315AF041300AA0616 /* Sources */,
+				ABE55ED415AF041300AA0616 /* Frameworks */,
+				ABE55ED515AF041300AA0616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIQueryTest;
+			productName = UIQueryTest;
+			productReference = ABE55ED715AF041300AA0616 /* UIQueryTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE55ECE15AF041200AA0616 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CMN;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Navel Labs";
+			};
+			buildConfigurationList = ABE55ED115AF041200AA0616 /* Build configuration list for PBXProject "UIQueryTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABE55ECC15AF041200AA0616;
+			productRefGroup = ABE55ED815AF041300AA0616 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE55ED615AF041300AA0616 /* UIQueryTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE55ED515AF041300AA0616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE55EE615AF041300AA0616 /* InfoPlist.strings in Resources */,
+				ABE55EEF15AF041300AA0616 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABE55ED315AF041300AA0616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE55EE815AF041300AA0616 /* main.m in Sources */,
+				ABE55EEC15AF041300AA0616 /* CMNAppDelegate.m in Sources */,
+				ABE55EF215AF041300AA0616 /* CMNMasterViewController.m in Sources */,
+				ABE55EF515AF041300AA0616 /* CMNDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABE55EE415AF041300AA0616 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE55EE515AF041300AA0616 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ABE55EED15AF041300AA0616 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE55EEE15AF041300AA0616 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABE55EF615AF041300AA0616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABE55EF715AF041300AA0616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABE55EF915AF041300AA0616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIQueryTest/UIQueryTest-Prefix.pch";
+				INFOPLIST_FILE = "UIQueryTest/UIQueryTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABE55EFA15AF041300AA0616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIQueryTest/UIQueryTest-Prefix.pch";
+				INFOPLIST_FILE = "UIQueryTest/UIQueryTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE55ED115AF041200AA0616 /* Build configuration list for PBXProject "UIQueryTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE55EF615AF041300AA0616 /* Debug */,
+				ABE55EF715AF041300AA0616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE55EF815AF041300AA0616 /* Build configuration list for PBXNativeTarget "UIQueryTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE55EF915AF041300AA0616 /* Debug */,
+				ABE55EFA15AF041300AA0616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE55ECE15AF041200AA0616 /* Project object */;
+}
