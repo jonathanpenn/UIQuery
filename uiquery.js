@@ -35,6 +35,22 @@ var UIQuery = {
     else return element;
   },
 
+  firstKindWithName: function(kind, name, context) {
+    var typeClass = this.kindMap[kind];
+    var target = UIATarget.localTarget();
+
+    if (!context) {
+      context = target.frontMostApp().mainWindow();
+    }
+
+    var element = this.matchIn(context, function(element) {
+      return element instanceof typeClass && element.name() === name;
+    });
+
+    if (!element) return this.makeNilElement();
+    else return element;
+  },
+
   // Can't make one of these UIAElementNils, so let's "find" one
   makeNilElement: function() {
     if (this._nilElement) return this._nilElement;
@@ -74,6 +90,12 @@ var UIQuery = {
     target.popTimeout();
 
     return matchedElement;
+  },
+
+  kindMap: {
+    button: UIAButton,
+    cell: UIATableCell,
+    tableView: UIATableView
   }
 
 };
