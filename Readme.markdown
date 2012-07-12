@@ -20,6 +20,11 @@ the `.isValid()` query methods on the result of this search.
 Check out `test.js` as an example of how to use it.
 
 
+## To Run The Tests
+
+Simply cd into the project directory and type `./run_automation.sh`. That will trigger a compile and execute Instruments so you can see the tests execute against the sample application.
+
+
 ## Concerns with this approach:
 
 1. Since UIQuery sets the timeout to 0 so that the searching happens quickly,
