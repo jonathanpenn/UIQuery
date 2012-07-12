@@ -42,21 +42,14 @@ var UIQuery = {
 
     var element = this.matchIn(context, matches);
 
-    if (!element) return this.makeNilElement();
-    else return element;
-  },
-
-  // Can't make one of these UIAElementNils, so let's "find" one
-  makeNilElement: function() {
-    if (this._nilElement) return this._nilElement;
-
-    var target = UIATarget.localTarget();
-
-    target.pushTimeout(0);
-    this._nilElement = target.elements().firstWithName("__NOPE__");
-    target.popTimeout();
-
-    return this._nilElement;
+    if (!element) {
+      target.pushTimeout(0);
+      // Can't make one of these UIAElementNils, so let's "find" one
+      return target.elements().firstWithName("__NOPE__");
+      target.popTimeout();
+    } else {
+      return element;
+    }
   },
 
   matchIn: function(context, matches) {
