@@ -27,8 +27,6 @@ var UIQuery = {
       context = target.frontMostApp().mainWindow();
     }
 
-    target.pushTimeout(0);
-
     var element = this.matchIn(context, function(element) {
       return element.name() === name;
     });
@@ -36,22 +34,35 @@ var UIQuery = {
     // If no element is found, let's get a UIAElementNil to return
     if (!element) element = target.elements().firstWithName("__NOPE__");
 
-    target.popTimeout();
-
     return element;
   },
 
   matchIn: function(context, matches) {
+    var target = UIATarget.localTarget();
+
+    target.pushTimeout(0);
+
     var elements = context.elements();
+    var matchedElement = null;
 
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
 
-      if (matches(element)) return element;
+      if (matches(element)) {
+        matchedElement = element;
+        break;
+      }
 
       var matchedElement = this.matchIn(element, matches);
-      if (matchedElement) return matchedElement;
+      if (matchedElement) {
+        matchedElement = matchedElement;
+        break;
+      }
     }
+
+    target.popTimeout();
+
+    return matchedElement;
   }
 
 };
