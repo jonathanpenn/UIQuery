@@ -17,7 +17,8 @@ To match with the existing automation APIs, I have `firstWithName(...)` return
 a `UIAElementNil` if `matchIn(...)` doesn't find anything. That way you can use
 the `.isValid()` query methods on the result of this search.
 
-Check out `test.js` as an example of how to use it.
+There's some experimentation here to find specific types of elements with given
+names, and even a try at a "selector syntax".
 
 
 ## To Run The Tests
@@ -26,11 +27,23 @@ Simply cd into the project directory and type `./run_automation.sh`. That will
 trigger a compile and execute Instruments so you can see the tests execute
 against the sample application.
 
-    #import "support.js"
-    #import "uiquery.js"
+Here's what `test.js` gives you:
 
     test("Finds first element with a specific name", function() {
       var elm = UIQuery.firstWithName("Row 1");
+      if (!elm.isValid()) throw "Element wasn't found";
+    });
+
+    test("Find first type of element with a specific name", function() {
+      var elm = UIQuery.firstKindWithName("cells", "Row 1");
+      if (!elm.isValid()) throw "Element wasn't found";
+
+      var elm = UIQuery.firstKindWithName("buttons", "Row 1");
+      if (elm.isValid()) throw "Table cell was found when button was expected!";
+    });
+
+    test("Experimental query syntax", function() {
+      var elm = UIQuery.firstWithQuery("cells[Row 1]");
       if (!elm.isValid()) throw "Element wasn't found";
     });
 
@@ -43,7 +56,7 @@ against the sample application.
       var elm = UIQuery.firstWithName("Row 1");
       elm.tap();
 
-      UIATarget.localTarget().delay(2);
+      UIATarget.localTarget().delay(0.6);
 
       var staticText = UIQuery.firstWithName("Row 1");
 
